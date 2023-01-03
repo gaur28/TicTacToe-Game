@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto&display=swap'); </style>
+        
+    <link rel="stylesheet" href="/tictactoe game/style.css">
+    <script src="/tictactoe game/app.js" defer></script>
+</head>
+<body>
+    
+   <header id="main-header">
+        <div id="headings">
+            <h1>Tic Tac Toe</h1>
+            <h2>Your turn <span id="active-player-name"></span></h2>
+        </div>
+    
+    </header>
+   
+    <section>
+   <main>
+        <div id="drawback"></div>
+        <div id="setup-aside">
+            <aside class="modal" id="config-overlay">
+            <h2>Choose Your Name</h2>
+    
+            <form action="" class=".form-control">
+              <div class="form-entry">
+                <label for="player-name">Player Name</label>
+                <input type="text" name="player-name" id="playername" />
+              </div>
+              <p id="config-error"></p>
+              <div>
+                <button type="reset" id="cancel-config-btn" class="btn btn-alt">Cancel</button>
+                <button type="submit " class="btn">Confirm</button>
+              </div>
+            </form>
+          </aside> 
+        </div>
+        
+    <section  id="active-game">
+        <ol id="game-board">
+            <li data-col="1" data-row ="1"></li>
+            <li data-col ="2" data-row ="1"></li>
+            <li data-col ="3" data-row ="1"></li>
+            <li data-col ="1" data-row ="2"></li>
+            <li data-col ="2" data-row ="2"></li>
+            <li data-col ="3" data-row ="2"></li>
+            <li data-col ="1" data-row ="3"></li>
+            <li data-col ="2" data-row ="3"></li>
+            <li data-col ="3" data-row ="3"></li>
+        </ol>
+    </section>
+   
+
+    <section id="game-config">
+        
+        <button class="btn" id="start-new-game">Start New Game</button>
+        
+            <ol>
+              <li>
+                <article id="player-1-data">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKtlNqBJlNFlfBL8V4OzEUcvDTnfQ0chffGg&usqp=CAU" alt="Player 1 logo" class="player-logo">
+                    
+                    
+                    <h3>PLayer Name</h3>
+                    <p class="player-symbol">X</p>
+                    <button class="btn btn-alt" id="edit-player-1-btn" data-playerid="1">Edit</button>
+                </article>
+              </li>
+              <li>
+                <article id="player-2-data">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtF3o2PvqxOMHgdrpj_YRItsLBjxyTeNZu_Q&usqp=CAU" alt="Player 2 logo" class="player-logo">
+
+                   
+                    <h3>PLayer Name</h3>
+                    <p class="player-symbol">O</p>
+                    <button class="btn btn-alt" id="edit-player-2-btn" data-playerid="2">Edit</button>
+                </article>
+              </li>
+            </ol>
+       
+        
+    </section>
+    <section>
+        <article class="modal-2" id="game-over">
+            <h3>You Won, <span id="winner-name">Player Name</span></h3>
+            
+        </article>
+    </section>
+
+</main>
+</body>
+</html>
